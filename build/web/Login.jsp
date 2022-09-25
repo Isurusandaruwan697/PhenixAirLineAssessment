@@ -92,7 +92,7 @@ img.avatar {
     <button type="submit">Login</button>&ensp;&ensp;<button  type="reset" class="cancelbtn">Cancel</button><br><br>
     <label>
       <input type="checkbox" checked="checked" name="remember"> Remember me&ensp;&ensp;
-     <a href="#">Sign-Up</a>
+     <a href="Registration.jsp">Sign-Up</a>
     </label>
         
   </div>
