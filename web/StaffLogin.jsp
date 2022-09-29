@@ -9,9 +9,32 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Staff Login</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1></h1>
+        
+        <form action="" method="post">
+  <div class="imgcontainer">
+    <img src="kisspng.jpg" alt="Avatar" class="avatar">
+  </div>
+      <center>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+        
+    <button type="submit">Login</button>&ensp;&ensp;<button  type="reset" class="cancelbtn">Cancel</button><br><br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me&ensp;&ensp;
+     <a href="#">Sign-Up</a>
+    </label>
+        
+  </div>
+
+      </center>
+</form>
     </body>
 </html>
