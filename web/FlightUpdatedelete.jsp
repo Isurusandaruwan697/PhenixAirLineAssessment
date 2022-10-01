@@ -14,6 +14,62 @@
     <body>
         <div>
             <style>
+                
+                 /*navigation css  */
+                      
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+                      /*footer css*/
 *{
   margin: 0;
   padding: 0;
@@ -150,6 +206,21 @@ footer a:hover{
   }
 }
             </style>
+            
+                <!--navigation html-->
+        <div class="header">     
+  <h1>Phenix AirLines</h1>
+  <p>Let's Flight Beyond The World.</p>
+</div>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="Login.jsp">User</a>
+  <a href="#">Staff</a>
+  <a href="#" class="right">Admin</a>
+</div>
+                
+                <!--footer html-->
             
             <footer>
               <div class="article">
