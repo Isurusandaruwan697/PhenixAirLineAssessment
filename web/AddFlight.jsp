@@ -14,8 +14,44 @@
     <body>
         <div>
             <center>
+                <form action="addFlight" method="POST">
                 
+                 <table border="1">
+               
+                <tbody>
+                    <tr>
+                        <td>Flight Name</td>
+                        <td><input type="text" name="name" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>From</td>
+                        <td><input type="text" name="from" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>TO</td>
+                        <td><input type="text" name="to" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Arrival-Time</td>
+                        <td><input type="time" name="Arivaltime" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Departure-Time</td>
+                        <td><input type="time" name="Depachertime" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit" value="submit" /></td>
+                        <td><input type="reset" value="reset" /></td>
+                    </tr>
+               
+                </tbody>
+            </table>
+                
+            </form>
+                <br>
+           
             </center>
+            
         </div>
         <footer>
               <div class="article">
