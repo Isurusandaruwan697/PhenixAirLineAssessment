@@ -14,7 +14,8 @@
     <body>
         <div>
             <center>
-                
+                <form action="addFlight" method="POST">
+                </form>
             </center>
         </div>
         <footer>
