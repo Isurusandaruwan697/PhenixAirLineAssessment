@@ -19,10 +19,7 @@
                  <table border="1">
                
                 <tbody>
-                    <tr>
-                        <td>Flight Name</td>
-                        <td><input type="text" name="name" value="" /></td>
-                    </tr>
+                    
                     <tr>
                         <td>From</td>
                         <td><input type="text" name="from" value="" /></td>
