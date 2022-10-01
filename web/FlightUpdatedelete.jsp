@@ -151,6 +151,21 @@ footer a:hover{
 }
             </style>
             
+                <!--navigation html-->
+        <div class="header">     
+  <h1>Phenix AirLines</h1>
+  <p>Let's Flight Beyond The World.</p>
+</div>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="Login.jsp">User</a>
+  <a href="#">Staff</a>
+  <a href="#" class="right">Admin</a>
+</div>
+                
+                <!--footer html-->
+            
             <footer>
               <div class="article">
                 <div class="left box">
