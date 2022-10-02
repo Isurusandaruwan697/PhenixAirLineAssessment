@@ -65,7 +65,8 @@ button:hover {
 } </style>
     </head>
     <body>
-             <form action="" method="post">
+         <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+             <form action="userReg" method="post">
   
       <center>
          
