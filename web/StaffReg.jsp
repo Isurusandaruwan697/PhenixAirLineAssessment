@@ -30,8 +30,14 @@
                    
                    <p>Confirm Password</p>
                    <input type="password" placeholder="Repeat your password" name="re_pass" id="re_pass"required>
-							
+                   
+                   <P>Staff Category</p>
+                   <select name-"Staff Category">
+                           <option value="">--Select--</option>
+                       <option value="Grade One Staff">Grade One Staff</option>
+                       <option value="Grade Two Staff">Grade Two Staff</option>
            
+                   
                 <input type="submit" value="Register">
                    
                  <a href="index.jsp">Already have Account?</a>
