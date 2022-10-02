@@ -80,22 +80,30 @@
     </head>
     <body>
         <h2>Admin Login</h2><br>    
-    <div class="login">    
-    <form id="login" method="get" action="login.php">    
-        <label><b>User Name     
-        </b>    
-        </label>    
-        <input type="text" name="Uname" id="Uname" placeholder="Username">    
-        <br><br>    
-        <label><b>Password     
-        </b>    
-        </label>    
-        <input type="Password" name="Pass" id="Pass" placeholder="Password">    
-        <br><br>    
-        <input type="button" name="log" id="log" value="Log In">       
-        <input type="reset" name="cancel" id="cancel" value="Cancel">   
-            
-    </form>     
-</div>    
+            <div>
+
+ <form action="login" method="post">
+  <div class="imgcontainer">
+    <img src="kisspng.jpg" alt="Avatar" class="avatar">
+  </div>
+      <center>
+  <div class="container">
+    <label for="uname"><b>Admin-Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+
+    <label for="psw"><b>Admin-Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+        
+    <button type="submit">Login</button>&ensp;&ensp;<button  type="reset" class="cancelbtn">Cancel</button><br><br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me&ensp;&ensp;
+     <a href="Registration.jsp">Sign-Up</a>
+    </label>
+        
+  </div>
+
+      </center>
+</form>            
+        </div>    
     </body>
 </html>
