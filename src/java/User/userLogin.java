@@ -5,25 +5,26 @@
  */
 package User;
 
+import com.mysql.jdbc.Connection;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.sql.ResultSet;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author User
  */
-@WebServlet(name = "userReg", urlPatterns = {"/userReg"})
-public class userReg extends HttpServlet {
+@WebServlet(name = "userLogin", urlPatterns = {"/userLogin"})
+public class userLogin extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,10 +43,10 @@ public class userReg extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet userReg</title>");            
+            out.println("<title>Servlet userLogin</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet userReg at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet userLogin at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -77,42 +78,38 @@ public class userReg extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        
-        String user=request.getParameter("uname");
-       String email=request.getParameter("email");
-       String mobile=request.getParameter("mobile");
+       // processRequest(request, response);
+       
+        String email=request.getParameter("username");
        String pass=request.getParameter("psw");
-        RequestDispatcher dispatcher=null;
+       HttpSession session=request.getSession();
+       RequestDispatcher dispatcher=null;
        
         try {
-             Statement st ;
-
-                   
-
+            
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into user(name,email,mobile,pass) values (?,?,?,?)");
-            pst.setString(1, user);
-                        pst.setString(2, email);
-                                    pst.setString(3, mobile);
-                                                pst.setString(4, pass);
-                                                
-                                                int rowCount = pst.executeUpdate();
-                                                dispatcher=request.getRequestDispatcher("userReg.jsp");
-                                                if(rowCount>0){
-                                                    request.setAttribute("status", "sucuss");
-                                                }
-                                                else{
-                                                    request.setAttribute("status", "faild");
-
-                                                }
-         
-            dispatcher.forward(request, response);
+            PreparedStatement pst=con.prepareStatement("select * from user where email=? and pass=?");
+            pst.setString(1, email);
+            pst.setString(2, pass);
+            
+             ResultSet rs=pst.executeQuery();
+             
+              if(rs.next()){
+             session.setAttribute("uname",rs.getString("name"));
+             dispatcher = request.getRequestDispatcher("userDashbord.jsp");
+             
+         }else{
+             request.setAttribute("status", "failed");
+             dispatcher = request.getRequestDispatcher("userLogin.jsp");
+             
+         }
+               dispatcher.forward(request,response);
             
         } catch (Exception e) {
+            e.printStackTrace();
         }
-
+       
     }
 
     /**
