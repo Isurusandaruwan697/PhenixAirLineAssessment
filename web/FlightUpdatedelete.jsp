@@ -9,66 +9,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Staff 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Staff 2</title>
     </head>
     <body>
         <div>
             <style>
                 
-                 /*navigation css  */
-                      
-* {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-
-
                       /*footer css*/
 *{
   margin: 0;
@@ -207,18 +156,51 @@ footer a:hover{
 }
             </style>
             
-                <!--navigation html-->
-        <div class="header">     
-  <h1>Phenix AirLines</h1>
-  <p>Let's Flight Beyond The World.</p>
-</div>
+            
+            
+                <!--staff 2 add flight form html-->
+                
+         
+    <center>
+        <form method="POST" action="flightView">
+            
+           <table width="400px" border="1"
 
-<div class="navbar">
-  <a href="#">Home</a>
-  <a href="Login.jsp">User</a>
-  <a href="#">Staff</a>
-  <a href="#" class="right">Admin</a>
-</div>
+                    <colspan="2"><h1>Add flights</h1>
+                    
+                        <br><br>
+                    Flight ID
+                    <input type="text" name="flightID" id="flightID">
+                <br><br>
+                    Flight Name
+                    <input type="text" name="name" id="name">
+                <br><br>
+                    Flight From</td>
+                    <input type="text" name="Ffrom" id="Ffrom">
+               <br><br>
+                    Flight To
+                    <input type="text" name="Fto" id="Fto">
+               <br><br>
+               
+                    Arrival Time
+                    <input type="text" name="Atime" id="Atime">
+                
+                <br><br>
+                
+                    Departure Time
+                    <input type="text" name="Dtime" id="Dtime">
+                
+                <br><br>
+                
+                    <colspan="2"> <input type="submit" value="submit">
+                                     <input type="reset" value="cancel">
+               
+        </form>
+        
+        <p><a href="flightUI">View Flights</a></p>
+        
+        </center>
+                
                 
                 <!--footer html-->
             
