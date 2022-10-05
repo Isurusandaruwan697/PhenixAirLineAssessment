@@ -16,6 +16,7 @@
          
         
           <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+          
            <form action="userLogin" method="post">
   <div class="imgcontainer">
     <img src="kisspng.jpg" alt="Avatar" class="avatar">
