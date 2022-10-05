@@ -13,41 +13,36 @@
     </head>
     <body>
         <div>
-            <center>
-                <form action="addFlight" method="POST">
-                
-                 <table border="1">
-               
-                <tbody>
+           <center>
+        <form method="POST" action="flightView">
+            
+           <table width="400px" border="1"
+
+                    <colspan="2"><h1>Add flights</h1>
                     
-                    <tr>
-                        <td>From</td>
-                        <td><input type="text" name="from" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>TO</td>
-                        <td><input type="text" name="to" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Arrival-Time</td>
-                        <td><input type="time" name="Arivaltime" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Departure-Time</td>
-                        <td><input type="time" name="Depachertime" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="submit" /></td>
-                        <td><input type="reset" value="reset" /></td>
-                    </tr>
-               
-                </tbody>
-            </table>
+                       
+                    Flight ID
+                    <input type="text" name="flightID" id="flightID">
                 
-            </form>
-                <br>
+                    Flight Name
+                    <input type="text" name="name" id="name">
+              
+                    Flight From</td>
+                    <input type="text" name="Ffrom" id="Ffrom">
+               <br><br>
+                    Flight To
+                    <input type="text" name="Fto" id="Fto">
+              
+               
+
+               
+        </form>
+        
+        <p><a href="flightUI">View Flights</a></p>
+        
+        </center>
+                
            
-            </center>
             
         </div>
         <footer>
