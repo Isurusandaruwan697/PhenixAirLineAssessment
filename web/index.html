@@ -6,27 +6,118 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <title>PhinexAirLines</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PhoneixAirLines</title>
-        <link rel="stylesheet" href="index/index.css">
-        
+                  <style>
+                      
+/*Footer css*/
+                      
+
+                      
+                      
+/*navigation css  */
+                      
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+</style>
     </head>
     <body>
-          <nav class="navbar">
-        <div class="max-width">
-            <div class="logo"><a href="#"><img src="images/logo.png" alt="logo"></a></div>
-            <ul class="menu">
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">BOOKING</a></li>
-                <li><a href="#">EXPERIENCE</a></li>
-                <li><a href="#">WHERE WE FLY</a></li>
-                <li><a href="#">LOGIN</a></li>
-            </ul>
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav> 
+        <div class="header">     
+  <h1>Phenix AirLines</h1>
+  <p>Let's Flight Beyond The World.</p>
+</div>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="userLogin.jsp">User</a>
+  <a href="StaffLogin.jsp">Staff</a>
+  <a href="adminLogin.jsp" class="right">Admin</a>
+</div>
+        
+        
+        
+         <footer>
+              <div class="article">
+                <div class="left box">
+                  <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>Launched in 2022, peonix airline is an award winning airline with a solid reputation for service, comfort, safety, reliability, and punctuality.</p>
+                  </div>
+
+                   <!--contact us division-->
+                  <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                      <a href="#"><i class="fas fa-phone-volume"></i>+94110012345</a>
+                    </div>
+                    <div class="email">
+                      <a href="#"><i class="fas fa-envelope"></i>peonixairline@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+               <!--our service division-->
+                <div class="middle box">
+                  <div class="topic">Our Services</div>
+                  <div><a href="#">Cargo</a></div>
+                  <div><a href="#">Training</a></div>
+                  <div><a href="#">Ground Handling</a></div>
+                  <div><a href="#">Air Taxi</a></div>
+                  <div><a href="#">Global citizenship</a></div>
+                  <div><a href="#">business credit cards</a></div>
+               <!-- subscribe us and social media division-->
+                
+              
+              </div>
+            </footer>
     </body>
 </html>
