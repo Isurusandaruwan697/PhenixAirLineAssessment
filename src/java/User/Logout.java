@@ -5,14 +5,8 @@
  */
 package User;
 
-
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,8 +18,8 @@ import javax.servlet.http.HttpSession;
  *
  * @author User
  */
-@WebServlet(name = "userLogin", urlPatterns = {"/userLogin"})
-public class userLogin extends HttpServlet {
+@WebServlet(name = "Logout", urlPatterns = {"/Logout"})
+public class Logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,10 +38,10 @@ public class userLogin extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet userLogin</title>");            
+            out.println("<title>Servlet Logout</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet userLogin at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Logout at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -65,7 +59,13 @@ public class userLogin extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+
+         HttpSession session=request.getSession();
+        session.invalidate();
+        response.sendRedirect("userLogin.jsp");
+        
+
     }
 
     /**
@@ -79,42 +79,7 @@ public class userLogin extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
-       
-        String email=request.getParameter("username");
-       String pass=request.getParameter("psw");
-       HttpSession session=request.getSession();
-       RequestDispatcher dispatcher=null;
-       
-        try {
-            
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("select * from user where email=? and pass=?");
-            pst.setString(1, email);
-            pst.setString(2, pass);
-            
-             ResultSet rs=pst.executeQuery();
-             
-              if(rs.next()){
-             session.setAttribute("uname",rs.getString("name"));
-             dispatcher = request.getRequestDispatcher("userDashbord.jsp");
-             
-             session.setAttribute("email",rs.getString("email"));
-                session.setAttribute("mobile",rs.getString("mobile"));
-                 session.setAttribute("pass",rs.getString("pass"));
-             
-         }else{
-             request.setAttribute("status", "failed");
-             dispatcher = request.getRequestDispatcher("userLogin.jsp");
-             
-         }
-               dispatcher.forward(request,response);
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-       
+        processRequest(request, response);
     }
 
     /**
