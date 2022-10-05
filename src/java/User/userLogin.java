@@ -5,9 +5,10 @@
  */
 package User;
 
-import com.mysql.jdbc.Connection;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -98,6 +99,10 @@ public class userLogin extends HttpServlet {
               if(rs.next()){
              session.setAttribute("uname",rs.getString("name"));
              dispatcher = request.getRequestDispatcher("userDashbord.jsp");
+             
+             session.setAttribute("email",rs.getString("email"));
+                session.setAttribute("mobile",rs.getString("mobile"));
+                 session.setAttribute("pass",rs.getString("pass"));
              
          }else{
              request.setAttribute("status", "failed");
