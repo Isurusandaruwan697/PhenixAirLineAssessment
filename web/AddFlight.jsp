@@ -34,18 +34,7 @@
                     <input type="text" name="Fto" id="Fto">
               
                
-                    Arrival Time
-                    <input type="text" name="Atime" id="Atime">
-                
-               
-                
-                    Departure Time
-                    <input type="text" name="Dtime" id="Dtime">
-                
-                <br><br>
-                
-                    <colspan="2"> <input type="submit" value="submit">
-                                     <input type="reset" value="cancel">
+
                
         </form>
         
