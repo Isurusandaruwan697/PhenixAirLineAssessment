@@ -10,14 +10,47 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index/index.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+        
+        
+        <script>
+    $(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+        }
+    });
+
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+});
+</script>
+
+
     </head>
     <body>
 
-        
+
+
+
+
+
+
+
+
+
+
 <!-- navigation bar -->        
         <nav class="navbar">
             <div class="max-width">
-                <div class="logo"><a href="#"><img src="images/logo1.png" alt="logo"></a></div>
+                <div class="logo"><a href="#"><img src="images/logo4.png" alt="logo"></a></div>
                     <ul class="menu">
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">BOOKING</a></li>
@@ -55,12 +88,18 @@ and open the template in the editor.
                     <img src="images/singapore.jpg" alt="singapore">
                 </div>
                 <div class="column right">
-                    
+                    <img src="images/australia.jpg" alt="australia">
                  
                 </div>
             </div>
         </div>
     </section>
+
+
+
+
+
+
 
     </body>
 </html>
