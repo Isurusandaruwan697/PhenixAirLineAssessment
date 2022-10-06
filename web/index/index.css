@@ -35,7 +35,7 @@ and open the template in the editor.
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #000000;
+    background: #361500;
 }
 .navbar .max-width{
     display: flex;
@@ -59,10 +59,10 @@ and open the template in the editor.
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #FF0000;
+    color: #CC9544;
 }
 .navbar.sticky .menu li a:hover{
-    color: #0B0C10;
+    color: #CC9544;
 }
 
 /* menu btn styling */
@@ -78,10 +78,10 @@ and open the template in the editor.
 /* home section styling */
 .home{
     display: flex;
-    background: url(../images/plane2.jpg) no-repeat center;
+    background: url(../images/plane5.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
-    color: #FF0000;
+    color: #fff;
     min-height: 500px;
     font-family: 'Raleway', sans-serif;
 }
@@ -90,10 +90,75 @@ and open the template in the editor.
 }
 .home .home-content .text-1{
     font-size: 45px;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
+    /*color : #ffffff;*/
 }
 .home .home-content .text-2{
     font-size: 100px;
     font-weight: 600;
     margin-left: -3px;
+}
+
+
+
+
+
+
+
+
+/* about section styling */
+
+section{
+    padding: 100px 0;
+}
+.about{
+    font-family: 'Poppins',sans-serif;
+/*    background-color: black;*/
+    color: #ffffff;
+}
+.about .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu',sans-serif;
+}
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 4px;
+    background: white;
+    transform: translateX(-50%);
+
+}
+
+.about .about-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    height: 400px;
+    width: 324px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right img{
+    height: 500px;
+    width: 424px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .right{
+    width: 40%;
 }
