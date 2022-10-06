@@ -16,19 +16,20 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   
-  
+             <link href="StaffCss/profile.css" rel="stylesheet" type="text/css"/>
   
         <title>View Flight</title>
     </head>
     <body><br><br>
-        <%
+        
+    <center>
+        <h2>Avilable Flights </h2><br>
+          <%
         if(session.getAttribute("uname")==null){
             response.sendRedirect("userLogin.jsp");
         }
         
         %>
-    <center>
-        <h2>Avilable Flights </h2><br>
         <table class="table table-striped" style="width:70%" >
             <tr>
                 <th>Flight Id</th>
@@ -57,7 +58,7 @@
                                                                  <td><%=rs.getDate("date")%></td>
                                                                  <td><%=rs.getString("from")%></td>
                                                                  <td><%=rs.getString("to")%></td>
-                                                                 <td><a href="book">Reserve</a></td>
+                                                                 <td><a href="book" class="singn-up">Reserve</a></td>
             </tr>
                                                                 <%
 

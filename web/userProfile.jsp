@@ -15,12 +15,18 @@
     <head>
          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title>User Profile</title>
+                 <link href="StaffCss/profile.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
            <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
         
+        <%
+        if(session.getAttribute("uname")==null){
+            response.sendRedirect("userLogin.jsp");
+        }
         
         %>
+        
         <%
            String nam=(String)session.getAttribute("uname"); 
            String email=(String)session.getAttribute("email");
@@ -30,7 +36,7 @@
            
                   
 
-    <center><br>
+    <center><br><br><br>
         <h1>User Profile</h1><br>
       <table class="table table-striped" style="width:70%">
   <tr>
@@ -51,7 +57,7 @@
     <td><%=pass%></td>
   </tr>
 </table>  
-  <a href="userUpdate.jsp">Update Profile</a></li>
+  <a href="userUpdate.jsp"class="singn-up">Update Profile</a></li>
 </center>
     
     </body>

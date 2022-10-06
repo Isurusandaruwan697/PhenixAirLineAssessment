@@ -9,7 +9,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+         <link href="StaffCss/update.css" rel="stylesheet" type="text/css"/>
         <title>update user</title>
         <script>
 function myFunction() {
@@ -18,12 +19,11 @@ function myFunction() {
 </script>
     </head>
     <body>
-            <%
-        if(session.getAttribute("uname")==null){
-            response.sendRedirect("userLogin.jsp");
-        }
         
-        %>
+               <header>
+                   <br><br><br><br><br><br>
+       </header>
+            
         <%
            String nam=(String)session.getAttribute("uname"); 
            String email=(String)session.getAttribute("email");
@@ -37,8 +37,8 @@ function myFunction() {
       <center>
          
   <div class="container">
-      <div class="regbox box">
-       <h1>User Registration</h1>
+      <div class="regbox box"><br>
+          <h2>User Profile Update</h2><br>
     <label for="uname"><b></b></label>
     <input type="text" placeholder="Enter Username" name="uname"  value="${uname}"required>
 
@@ -52,7 +52,7 @@ function myFunction() {
     <input type="password" placeholder="Enter Password" name="psw" value="${pass}"  required>
         
     <p></p>
-                                       
+    <br>                          
                 <input type="submit" value="Update Profile" onclick="myFunction()">
              
   </div>
