@@ -59,7 +59,19 @@
       
       </form>
         
-       
+       <div>
+        <a href="flightUI">
+         <button class="button3" style=" height: 70px; width: 100%; border-radius: 5px; border: none; color: #fff; font-size: 18px; font-weight: 500; letter-spacing: 1px; cursor: pointer; transition: all 0.3s ease; background: linear-gradient(135deg, #71b7e6, #9b59b6);"> View Flights </button>
+        </a>
+        </div>
+        
+      
+  </div>
+    </div>
+        
+        
+                    </section>
+
 
     </body>
 </html>
