@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>user Dashbord</title>
     </head>
     <body>
         <h1>User Dashbord</h1>
@@ -37,7 +37,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="userProfile.jsp">User</a></li>
         <li><a href="userUpdate.jsp">Update Profile</a></li>
-        <li><a href="#section3">View Flights</a></li>
+        <li><a href="viewFlight.jsp">View Flights</a></li>
         <li><a href="#section3">Reserve Flight</a></li>
         <li><a href="Logout">Log-Out</a></li>
       </ul><br>
