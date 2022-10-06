@@ -9,32 +9,55 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <link href="StaffCss/user.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
         
-         
         
-          <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
-          
-           <form action="userLogin" method="post">
-  <div class="imgcontainer">
-    <img src="kisspng.jpg" alt="Avatar" class="avatar">
-  </div>
-      <center>
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required><br><br>
+         <nav class="navbar">
+        <h1 class="logo">The Little Hopes<div class="line2"></div></h1>
+        <ul class="links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About-Us</a></li>
+            <li><a href="contact us.html">Contact-Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="login.html">Log-In</a></li>
+            <li><a href=".html">Rate Work</a></li>
+        </ul>
+        <label id="icon" class="menu1">
+            <i class="fa fa-bars"></i>
+        </label>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+    </nav>
         
-    <button type="submit">Login</button>&ensp;&ensp;<button  type="reset" class="cancelbtn">Cancel</button><br><br>
+        
+        
+    <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+    <div class="center">   
+        <img src="user-286.png" class="avatar">
+        <h1></h1>
+        
+   <form action="userLogin" method="post">
+  <div class="txt_field">
+    <input type="text" placeholder="" name="username" required>
+    <span></span>
+     <label for="uname"><b>Username</b></label>
+  </div> 
+    
+   <div class="txt_field">    
+    <input type="password" placeholder="" name="psw" required>
+    <span></span>
+     <label for="psw"><b>Password</b></label>
+   </div> 
+     
+       <input type="submit" value="Log-In">&ensp;
     <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me&ensp;&ensp;
-     <a href="userReg.jsp">Sign-Up</a>
+     
+      <div class="singn-up">
+     Let's <a href="userReg.jsp">Sign-Up</a>
     </label>
-        
+     </div>  
   </div>
 
       </center>
