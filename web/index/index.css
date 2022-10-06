@@ -47,6 +47,8 @@ and open the template in the editor.
     width: 132.5499px;
     height: 49.9626 px;
 }
+
+
 .navbar .menu li{
     list-style: none;
     display: inline-block;
@@ -59,7 +61,7 @@ and open the template in the editor.
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #CC9544;
+    color: #361500;
 }
 .navbar.sticky .menu li a:hover{
     color: #CC9544;
@@ -78,7 +80,7 @@ and open the template in the editor.
 /* home section styling */
 .home{
     display: flex;
-    background: url(../images/plane5.jpg) no-repeat center;
+    background: url(../images/plane8.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
     color: #fff;
@@ -114,7 +116,7 @@ section{
 .about{
     font-family: 'Poppins',sans-serif;
 /*    background-color: black;*/
-    color: #ffffff;
+    color: #361500;
 }
 .about .title{
     position: relative;
@@ -123,7 +125,7 @@ section{
     font-weight: 500;
     margin-bottom: 60px;
     padding-bottom: 20px;
-    font-family: 'Ubuntu',sans-serif;
+    font-family: 'Raleway',sans-serif;
 }
 .about .title::before{
     content: "";
