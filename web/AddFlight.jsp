@@ -6,93 +6,60 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Add Flight</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Staff2CSS/style.css">
+        <title>Staff 1</title>
     </head>
+    
     <body>
-        <div>
-           <center>
+
+                <!--staff 2 add flight form html-->
+                
+                <section>
+    
+<!--        <form method="POST" action="flightView">-->
+            
+         <div class="container">
+    <div class="title">Add Flights</div>
+    <div class="content">
         <form method="POST" action="flightView">
-            
-           <table width="400px" border="1"
-
-                    <colspan="2"><h1>Add flights</h1>
-                    
-                       
-                    Flight ID
-                    <input type="text" name="flightID" id="flightID">
-                
-                    Flight Name
-                    <input type="text" name="name" id="name">
-              
-                    Flight From</td>
-                    <input type="text" name="Ffrom" id="Ffrom">
-               <br><br>
-                    Flight To
-                    <input type="text" name="Fto" id="Fto">
-              
-               
-
-               
-        </form>
-        
-        <p><a href="flightUI">View Flights</a></p>
-        
-        </center>
-                
-           
-            
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Flight ID</span>
+            <input type="text" placeholder="Enter flight ID" name="flightID" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Flight Name</span>
+            <input type="text" placeholder="Enter flight name" name="name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Flight From</span>
+            <input type="text" placeholder="Enter flght from" name="Ffrom" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Flight to</span>
+            <input type="text" placeholder="Enter flight to" name="Fto" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Arrival Time</span>
+            <input type="text" placeholder="Enter arrival time" name="Atime" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Departure Time</span>
+            <input type="text" placeholder="Enter departure time" name="Dtime" required>
+          </div>
         </div>
-        <footer>
-              <div class="article">
-                <div class="left box">
-                  <div class="upper">
-                    <div class="topic">About us</div>
-                    <p>Launched in 2022, peonix airline is an award winning airline with a solid reputation for service, comfort, safety, reliability, and punctuality.</p>
-                  </div>
 
-                   <!--contact us division-->
-                  <div class="lower">
-                    <div class="topic">Contact us</div>
-                    <div class="phone">
-                      <a href="#"><i class="fas fa-phone-volume"></i>+94110012345</a>
-                    </div>
-                    <div class="email">
-                      <a href="#"><i class="fas fa-envelope"></i>peonixairline@gmail.com</a>
-                    </div>
-                  </div>
-                </div>
+           <input type="submit" value="Register"style="background-color: #0EBABD; border: none; border-radius: 5px; color: #333; /* Dark grey */ padding: 10px 20px; cursor: pointer; text-align: right">
+           <input type="reset" value="cansel" style="background-color: #d26a60; border: none; border-radius: 5px; color: #333; /* Dark grey */ padding: 10px 20px; cursor: pointer; text-align: right;">
+      
+      </form>
+        
+       
 
-               <!--our service division-->
-                <div class="middle box">
-                  <div class="topic">Our Services</div>
-                  <div><a href="#">Cargo</a></div>
-                  <div><a href="#">Training</a></div>
-                  <div><a href="#">Ground Handling</a></div>
-                  <div><a href="#">Air Taxi</a></div>
-                  <div><a href="#">Global citizenship</a></div>
-                  <div><a href="#">business credit cards</a></div>
-               <!-- subscribe us and social media division-->
-                </div>
-                <div class="right box">
-                  <div class="topic">Subscribe us</div>
-                  <form action="#">
-                    <input type="text" placeholder="Enter Your email address">
-                    <input type="submit" name="" value="Send">
-                    <div class="media-icons">
-                      <a href="#"><i class="fab fa-facebook-f"></i></a>
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                      <a href="#"><i class="fab fa-youtube"></i></a>
-                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              
-              </div>
-            </footer>
     </body>
 </html>
