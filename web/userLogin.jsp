@@ -10,30 +10,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <link href="StaffCss/user.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <title>
+              User Login
+          </title>
     </head>
     <body>
         
         
-         <nav class="navbar">
-        <h1 class="logo">The Little Hopes<div class="line2"></div></h1>
-        <ul class="links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="about.html">About-Us</a></li>
-            <li><a href="contact us.html">Contact-Us</a></li>
-            <li><a href="donate.html">Donate</a></li>
-            <li><a href="login.html">Log-In</a></li>
-            <li><a href=".html">Rate Work</a></li>
-        </ul>
+    <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+    
         <label id="icon" class="menu1">
             <i class="fa fa-bars"></i>
         </label>
 
     </nav>
-        
-        
-        
-    <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+    
     <div class="center">   
         <img src="user-286.png" class="avatar">
         <h1></h1>
@@ -42,7 +34,7 @@
   <div class="txt_field">
     <input type="text" placeholder="" name="username" required>
     <span></span>
-     <label for="uname"><b>Username</b></label>
+     <label for="uname"><b>User Email</b></label>
   </div> 
     
    <div class="txt_field">    

@@ -38,7 +38,7 @@
         <li class="active"><a href="userProfile.jsp">User</a></li>
         <li><a href="userUpdate.jsp">Update Profile</a></li>
         <li><a href="viewFlight.jsp">View Flights</a></li>
-        <li><a href="#section3">Reserve Flight</a></li>
+        <li><a href="SerchFlight.jsp">search Flight</a></li>
         <li><a href="Logout">Log-Out</a></li>
       </ul><br>
     </body>

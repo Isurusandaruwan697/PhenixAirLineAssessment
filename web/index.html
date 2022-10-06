@@ -12,88 +12,198 @@ and open the template in the editor.
         <link rel="stylesheet" href="index/index.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        
-        
-        
-        <script>
-    $(document).ready(function(){
-    $(window).scroll(function(){
-        if(this.scrollY > 20){
-            $('.navbar').addClass("sticky");
-        }else{
-            $('.navbar').removeClass("sticky");
-        }
-    });
-
-    // toggle menu/navbar script
-    $('.menu-btn').click(function(){
-        $('.navbar .menu').toggleClass("active");
-        $('.menu-btn i').toggleClass("active");
-    });
-});
-</script>
-
-
+          <link href="index/index.css" rel="stylesheet" type="text/css"/>
+       
     </head>
     <body>
 
 
+    <!--start nav bar  -->
+    <nav class="navbar">
+        <ul class="links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="userLogin.jsp">User</a></li>
+            <li><a href="StaffLogin.jsp">Staff</a></li>
+            <li><a href="adminLogin.jsp">Admin</a></li>
+            <li><a href="index.html">News</a></li>
+        </ul>
+        <label id="icon" class="menu1">
+            <i class="fa fa-bars"></i>
+        </label>
+
+    </nav>
+    <!--end of the nav bar-->
+    <div class="about-section">
+        <br><br><br><h1>Phinix Air Lines</h1>
+        </div>
+      
+    
 
 
+    <!--start who we are-->
+    <section>
 
+      <div class = "content">
+          <h2>Who We Are</h2>
+          <span><!-- line here --></span>
 
+          <p>We started extending help to needy children and youth who were
+            eager to study and work for a better life. This moment intensified when 
+            we found that there were many such underprivileged children who needed help 
+            with food, shelter and education. Our team expanded and we spread out
+            in different regions to make sure we cover all possible areas and help
+            as many children as possible.
+            We now run shelter homes, schools and a reasonable mess that helps such needy young
+            people. We also have our helpline offices spread throughout the country so one can 
+            approach us anytime they need help.</p>
+      </div>
+  </section>
+<!--end of the who we are-->
+ <!--start of the counter-->
+  
+    <center>
+         <h1 style="color:green"> Our numbers that speak </h1>
+         <section class="Image">
+          
+          
+         <div class="row">   
+        <div class="column">   
+            <div class="block">  
+                  
+            <p><i class="fa fa-user"></i></p>   
+            <h3> 950,000+ </h3>   
+            <p> Children Helped </p>   
+        </div>   
+            </div>  
+              
+        <div class="column">   
+            <div class="block">  
+                    
+            <p><i class="fa fa-book"></i></p>   
+            <h3> 50,000T </h3>   
+            <p> Food Provided </p>   
+            </div>  
+        </div>   
+              
+        <div class="column">   
+            <div class="block">  
+               
+            <p><i class="fa fa-smile-o"></i></p>   
+            <h3> $300,000+ </h3>   
+            <p> Funds Raised</p>   
+            </div>  
+        </div>      
+    </center>  
+    <!--end of the counter-->
 
+    <!-- start of ther gallery -->
+    <div class="header">
+        <h1>Image Gallary</h1>
+    </div>
 
+    
+    <div class="row">
 
-
-
-<!-- navigation bar -->        
-        <nav class="navbar">
-            <div class="max-width">
-                <div class="logo"><a href="#"><img src="images/logo5.png" alt="logo"></a></div>
-                    <ul class="menu">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">BOOKING</a></li>
-                        <li><a href="#">EXPERIENCE</a></li>
-                        <li><a href="#">WHERE WE FLY</a></li>
-                        <li><a href="#">LOGIN</a></li>
-                    </ul>
-                <div class="menu-btn">
-                <i class="fas fa-bars"></i>
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="images/aflight.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/business-travel_750xx2122-1194-0-111.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/early-morning-flights.jpg" style="width:100%" alt="">
             </div>
         </div>
-    </nav> 
-        
-        
-<!-- home section -->
 
-    <section class="home" id="home">
-        <div class="max-width">
-            <div class="home-content">
-                <div class="text-1">Towards a skyward</div>
-                <div class="text-2">with us....</div>
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="images/f1.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/flight.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/unnamed-49_1.jpg" style="width:100%" alt="">
             </div>
         </div>
-    </section>
 
-
-
-<!-- About section start -->
-
-    <section class="about" id="about">
-        <div class="max-width">
-            <h2 class="title">WHERE WE FLY</h2>
-            <div class="about-content">
-                <div class="column left">
-                    <img src="images/singapore.jpg" alt="singapore">
-                </div>
-                <div class="column right">
-                    <img src="images/australia.jpg" alt="australia">
-                 
-                </div>
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="images/flight.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/aflight.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/early-morning-flights.jpg" style="width:100%" alt="">
             </div>
         </div>
-    </section>
+    </div>
+    <!-- end of the gallery-->
+
+    <br>
+    <br>
+
+      <!--footer start-->
+    <footer class="footer">
+
+        <div class="left">
+      
+            <h3>Important links</h3>
+    
+            <p class="links">
+                <a href="#">Home</a><br>
+                
+                <a href="#">About</a><br>
+                
+                <a href="#">Contact Us</a><br>
+                
+                <a href="#">Donate</a><br>
+                <a href="#">Sign Up</a>
+            </p><br>
+    
+            <p class="name">© 2022 donate Pvt. Ltd.</p>
+        </div>
+    
+        <div class="center">
+            <div>
+                <h3>Contact Us</h3><br>
+                <p>Email:</p><br>
+                <p><span><a href="mailto:donate@gmail.com">donate@gmail.com</a></span></p>
+            </div>
+            <br><br>
+            <div>
+                <p>Phone</p><br>
+                <p>0775643128</p>
+            </div>
+            
+        </div>
+        <div class="right">
+            <h3>Mission</h3><br>
+            <div>
+            <p class="mission">
+                Our mission is to provide all the facilities for poor, orphaned children in order to develop their social, physical,emotional and intellectual abilities.We promote a safe environment that creates an opportuniy for all children to develop their skills and abilities in order to make their future success. </p></div>
+            <div class="icons">
+                <a href="http://www.facebook.com" target="_blank">
+    <img src="image/facebook.jpg" alt="Facebook" width="20" height="20"/>
+    </a>
+    <a href="www.twitter.com" target="_blank">
+    <img src="image/twit.jpg" alt="Twitter" width="20" height="20"/>
+    </a>
+        <a href="www.instagram.com" target="_blank">
+    <img src="image/insta.jpg" alt="instagram" width="20" height="20"/>
+    </a>
+        <a href="www.youtube.com" target="_blank">
+    <img src="image/youtube.jpg" alt="youtube" width="20" height="20"/>
+    </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!--footer end-->
+    
+
 
 
 

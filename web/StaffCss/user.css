@@ -135,48 +135,56 @@ input[type="submit"]:hover{
 }
 
 
-
-
-
-
-.navbar{
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    padding: 30px 0;
-    font-family: 'Ubuntu', sans-serif;
-    transition: all 0.3s ease;
-}
-.navbar.sticky{
-    padding: 15px 0;
-    background: #361500;
-}
-.navbar .max-width{
+ .navbar{
+    position: absolute;
+    top: 0;
+    left: 650px;
     display: flex;
-    align-items: center;
+    width: 100%;
     justify-content: space-between;
-}
-.navbar .max-width .logo a img{
-    display: inline-block;
-    width: 132.5499px;
-    height: 49px;
+    padding: 20px;
+    
 }
 
+nav a{
+    color:whitesmoke;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding:4px 10px ;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
 
-.navbar .menu li{
+a.active,a:hover{
+    border: 1px solid rgb(34, 33, 33);
+    border-radius: 12px;
+    transition: .20s; 
+}
+
+ul{
     list-style: none;
-    display: inline-block;
 }
-.navbar .menu li a{
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 25px;
-    transition: color 0.3s ease;
+
+.links{
+    display: flex;
+    align-items: center; 
+
 }
-.navbar .menu li a:hover{
-    color: #361500;
+
+.links li{
+    margin: 0 28px;
 }
-.navbar.sticky .menu li a:hover{
-    color: #CC9544;
+
+
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(54, 53, 53);
 }
+#icon{
+    display: none;
+}
+
+
