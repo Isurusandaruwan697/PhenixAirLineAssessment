@@ -10,6 +10,7 @@ and open the template in the editor.
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,600&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -51,14 +52,14 @@ and open the template in the editor.
     display: inline-block;
 }
 .navbar .menu li a{
-    color: #704F4F;
+    color: #fff;
     font-size: 18px;
     font-weight: 500;
     margin-left: 25px;
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #A77979;
+    color: #FF0000;
 }
 .navbar.sticky .menu li a:hover{
     color: #0B0C10;
@@ -70,4 +71,29 @@ and open the template in the editor.
     font-size: 23px;
     cursor: pointer;
     display: none;
+}
+
+
+
+/* home section styling */
+.home{
+    display: flex;
+    background: url(../images/plane2.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    color: #FF0000;
+    min-height: 500px;
+    font-family: 'Raleway', sans-serif;
+}
+.home .max-width{
+    margin: 215px 40px;
+}
+.home .home-content .text-1{
+    font-size: 45px;
+    margin-top: 100px;
+}
+.home .home-content .text-2{
+    font-size: 100px;
+    font-weight: 600;
+    margin-left: -3px;
 }
