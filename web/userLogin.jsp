@@ -9,32 +9,47 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+         <link href="StaffCss/user.css" rel="stylesheet" type="text/css"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <title>
+              User Login
+          </title>
     </head>
     <body>
         
-         
         
-          <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
-          
-           <form action="userLogin" method="post">
-  <div class="imgcontainer">
-    <img src="kisspng.jpg" alt="Avatar" class="avatar">
-  </div>
-      <center>
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required><br><br>
+    <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+    
+        <label id="icon" class="menu1">
+            <i class="fa fa-bars"></i>
+        </label>
 
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+    </nav>
+    
+    <div class="center">   
+        <img src="user-286.png" class="avatar">
+        <h1></h1>
         
-    <button type="submit">Login</button>&ensp;&ensp;<button  type="reset" class="cancelbtn">Cancel</button><br><br>
+   <form action="userLogin" method="post">
+  <div class="txt_field">
+    <input type="text" placeholder="" name="username" required>
+    <span></span>
+     <label for="uname"><b>User Email</b></label>
+  </div> 
+    
+   <div class="txt_field">    
+    <input type="password" placeholder="" name="psw" required>
+    <span></span>
+     <label for="psw"><b>Password</b></label>
+   </div> 
+     
+       <input type="submit" value="Log-In">&ensp;
     <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me&ensp;&ensp;
-     <a href="userReg.jsp">Sign-Up</a>
+     
+      <div class="singn-up">
+     Let's <a href="userReg.jsp">Sign-Up</a>
     </label>
-        
+     </div>  
   </div>
 
       </center>
