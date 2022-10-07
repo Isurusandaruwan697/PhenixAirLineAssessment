@@ -28,6 +28,14 @@
                    <p>User Email</p>
                    <input type="text" placeholder="Your User Email" name="email" required>
                    
+                   <p>User Type</p>
+                   <select name="usertype">
+                       <option value="">--Select--</option>
+                       <option value="sc1">Staff Category One</option>
+                       <option value="sc2">Staff Category Two</option>
+                       
+                   </select>
+                    
                    <p>Password</p>
                    <input type="password" placeholder="Your Password" name="password" required>
                    
