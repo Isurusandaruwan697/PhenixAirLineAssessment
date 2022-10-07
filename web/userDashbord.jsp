@@ -39,7 +39,7 @@
            
             <div class="box">
             <div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
-            <div class="content"><h3><a href="SerchFlight.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">Serch Flights</a></h3>
+            <div class="content"><h3><a href="SerchFlight.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">Search Flights</a></h3>
        <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
        </div>
             </div>
