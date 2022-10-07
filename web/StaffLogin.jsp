@@ -47,7 +47,7 @@
     <label>
      
       <div class="singn-up">
-     Let's <a href="StaffReg.jsp">Sign-Up</a>
+     <a href="StaffReg.jsp">Sign-Up</a>
     </label>
      </div>  
   </div>
