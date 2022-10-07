@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- *
  * @author HP
  */
 
@@ -29,10 +28,10 @@ public class LgServlet extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request servlet request
+     * @param request  servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * @throws IOException      if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -42,7 +41,7 @@ public class LgServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LgServlet</title>");            
+            out.println("<title>Servlet LgServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LgServlet at " + request.getContextPath() + "</h1>");
@@ -52,13 +51,14 @@ public class LgServlet extends HttpServlet {
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request servlet request
+     * @param request  servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
+     * @throws IOException      if an I/O error occurs
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -66,48 +66,57 @@ public class LgServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-  
-   @Override
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
-       
-       String email=request.getParameter("email");
-       String password=request.getParameter("password");
-       HttpSession session=request.getSession();
-       RequestDispatcher dispatcher=null;
-       
+        // processRequest(request, response);
+
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        HttpSession session = request.getSession();
+        RequestDispatcher dispatcher = null;
+
         try {
-            
+
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("select * from staffreg where email=? and password=?");
+            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false", "root", "");
+            PreparedStatement pst = con.prepareStatement("select * from staffreg where email=? and password=?");
             pst.setString(1, email);
-             
+
             pst.setString(2, password);
-            
-             ResultSet rs=pst.executeQuery();
-       
-        
-             
-              if(rs.next()){
-             
-             session.setAttribute("email",rs.getString("email"));
-                 session.setAttribute("password",rs.getString("password"));
-                 dispatcher = request.getRequestDispatcher("StaffDash.jsp");
-             
-             
-         }else{
-             request.setAttribute("status", "failed");
-             dispatcher = request.getRequestDispatcher("StaffReg.jsp");
-             
-         }
-               dispatcher.forward(request,response);
-            
+
+            ResultSet rs = pst.executeQuery();
+
+
+            if (rs.next()) {
+
+                session.setAttribute("email", rs.getString("email"));
+                session.setAttribute("password", rs.getString("password"));
+                session.setAttribute("usertype", rs.getString("usertype"));
+
+                String usertype = rs.getString("usertype");
+
+                if ("sc1".equals(usertype)) {
+                    dispatcher = request.getRequestDispatcher("index.html");
+                } else if ("sc2".equals(usertype)) {
+
+
+                    dispatcher = request.getRequestDispatcher("StaffReg.jsp");
+                }
+
+
+            } else {
+                request.setAttribute("status", "failed");
+                dispatcher = request.getRequestDispatcher("StaffReg.jsp");
+
+            }
+            dispatcher.forward(request, response);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
-       
+
     }
 
     /**
