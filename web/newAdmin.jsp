@@ -1,6 +1,6 @@
 <%-- 
-    Document   : userReg
-    Created on : Oct 4, 2022, 2:29:57 PM
+    Document   : newAdmin
+    Created on : Oct 7, 2022, 5:29:41 PM
     Author     : User
 --%>
 
@@ -10,17 +10,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          <link href="StaffCss/style.css" rel="stylesheet" type="text/css"/>
-        <title>user Registration</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+         <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
         
          
           <div class="container">
             <div class="regbox box">
                 <img class="avatar" src="StaffImg/RegLogo.png">
          
-     <form action="userReg" method="post">
+              <form action="adminReg" method="post">
          
   
        <h1>User Registration</h1>
@@ -51,6 +51,5 @@
                 alert("registration done!");
             }
         </script>
-            
     </body>
 </html>

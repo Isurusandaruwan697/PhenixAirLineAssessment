@@ -3,35 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Staff;
+package Admin;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * @author HP
+ *
+ * @author User
  */
-
-public class LgServlet extends HttpServlet {
+@WebServlet(name = "adminReg", urlPatterns = {"/adminReg"})
+public class adminReg extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -41,24 +42,23 @@ public class LgServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LgServlet</title>");
+            out.println("<title>Servlet adminReg</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LgServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet adminReg at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -66,57 +66,55 @@ public class LgServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // processRequest(request, response);
-
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        HttpSession session = request.getSession();
-        RequestDispatcher dispatcher = null;
-
+       // processRequest(request, response);
+       
+        String user=request.getParameter("uname");
+       String email=request.getParameter("email");
+       String mobile=request.getParameter("mobile");
+       String pass=request.getParameter("psw");
+        RequestDispatcher dispatcher=null;
+       
         try {
+             Statement st ;
+
+                   
 
             Class.forName("com.mysql.jdbc.Driver");
-            Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false", "root", "");
-            PreparedStatement pst = con.prepareStatement("select * from staffreg where email=? and password=?");
-            pst.setString(1, email);
+            Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false","root","");
+            PreparedStatement pst=con.prepareStatement("insert into admin(name,email,mobile,pass) values (?,?,?,?)");
+            pst.setString(1, user);
+                        pst.setString(2, email);
+                                    pst.setString(3, mobile);
+                                                pst.setString(4, pass);
+                                                
+                                                int rowCount = pst.executeUpdate();
+                                                dispatcher=request.getRequestDispatcher("adminReg.jsp");
+                                                if(rowCount>0){
+                                                    request.setAttribute("status", "sucuss");
+                                                }
+                                                else{
+                                                    request.setAttribute("status", "faild");
 
-            pst.setString(2, password);
-
-            ResultSet rs = pst.executeQuery();
-
-
-            if (rs.next()) {
-
-                session.setAttribute("email", rs.getString("email"));
-                session.setAttribute("password", rs.getString("password"));
-                session.setAttribute("usertype", rs.getString("usertype"));
-
-                String usertype = rs.getString("usertype");
-
-                if ("sc1".equals(usertype)) {
-                    dispatcher = request.getRequestDispatcher("index.html");
-                } else if ("sc2".equals(usertype)) {
-
-
-                    dispatcher = request.getRequestDispatcher("StaffReg.jsp");
-                }
-
-
-            } else {
-                request.setAttribute("status", "failed");
-                dispatcher = request.getRequestDispatcher("StaffReg.jsp");
-
-            }
+                                                }
+         
             dispatcher.forward(request, response);
-
+            
         } catch (Exception e) {
-            e.printStackTrace();
         }
 
+    
+       
     }
 
     /**
@@ -128,9 +126,5 @@ public class LgServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
-    private void setString(int i, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }

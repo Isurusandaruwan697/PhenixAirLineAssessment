@@ -10,100 +10,54 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin Login</title>
-        <style>
-            
-    body  
-    {  
-        margin: 0;  
-        padding: 0;  
-        background-color:#6abadeba;  
-        font-family: 'Arial';  
-    }  
-    .login{  
-            width: 382px;  
-            overflow: hidden;  
-            margin: auto;  
-            margin: 20 0 0 450px;  
-            padding: 80px;  
-            background: #23463f;  
-            border-radius: 15px ;  
-              
-    }  
-    h2{  
-        text-align: center;  
-        color: #277582;  
-        padding: 20px;  
-    }  
-    label{  
-        color: #08ffd1;  
-        font-size: 17px;  
-    }  
-    #Uname{  
-        width: 300px;  
-        height: 30px;  
-        border: none;  
-        border-radius: 3px;  
-        padding-left: 8px;  
-    }  
-    #Pass{  
-        width: 300px;  
-        height: 30px;  
-        border: none;  
-        border-radius: 3px;  
-        padding-left: 8px;  
-          
-    }  
-    #log{  
-        width: 100px;  
-        height: 30px;  
-        border: none;  
-        border-radius: 17px;  
-        padding-left: 7px;  
-        color: blue;  
-      
-      
-    }
-    #cancel{  
-        width: 100px;  
-        height: 30px;  
-        border: none;  
-        border-radius: 17px;  
-        padding-left: 7px;  
-        color: blue;  
-      
-      
-    }  
- 
-      
-
-        </style>
+      <link href="StaffCss/user.css" rel="stylesheet" type="text/css"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <h2>Admin Login</h2><br>    
-            <div>
 
- <form action="login" method="post">
-  <div class="imgcontainer">
-    <img src="kisspng.jpg" alt="Avatar" class="avatar">
-  </div>
-      <center>
-  <div class="container">
-    <label for="uname"><b>Admin-Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+     
+    <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+    
+        <label id="icon" class="menu1">
+            <i class="fa fa-bars"></i>
+        </label>
 
-    <label for="psw"><b>Admin-Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+    </nav>
+    
+    <div class="center">   
+        <img src="user-286.png" class="avatar">
+        <h1></h1>
         
-    <button type="submit">Login</button>&ensp;&ensp;<button  type="reset" class="cancelbtn">Cancel</button><br><br>
+   <form action="login" method="post">
+  <div class="txt_field">
+    <input type="text" placeholder="" name="uname" required>
+    <span></span>
+     <label for="uname"><b>Admin Email</b></label>
+  </div> 
+    
+   <div class="txt_field">    
+    <input type="password" placeholder="" name="psw" required>
+    <span></span>
+     <label for="psw"><b>Password</b></label>
+   </div> 
+     
+       <input type="submit" value="Log-In">&ensp;
     <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me&ensp;&ensp;
-     <a href="Registration.jsp">Sign-Up</a>
+     
+      <div class="singn-up">
+     Let's <a href="newAdmin.jsp">Sign-Up</a>
     </label>
-        
+     </div>  
   </div>
 
       </center>
-</form>            
-        </div>    
+</form>
+             <link rel=" stylesheet" href="alret/dist/sweetalert.css">
+        <script>
+            var status=document.getElementById("status").value;
+            if(status === "failed"){
+                alert("wrong user name or password!");
+            }
+        </script>
     </body>
 </html>

@@ -78,8 +78,7 @@ public class userReg extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        
-        String user=request.getParameter("uname");
+          String user=request.getParameter("uname");
        String email=request.getParameter("email");
        String mobile=request.getParameter("mobile");
        String pass=request.getParameter("psw");
@@ -112,7 +111,6 @@ public class userReg extends HttpServlet {
             
         } catch (Exception e) {
         }
-
     }
 
     /**
