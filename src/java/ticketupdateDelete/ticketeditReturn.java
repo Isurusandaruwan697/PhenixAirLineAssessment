@@ -55,7 +55,7 @@ public class ticketeditReturn extends HttpServlet {
            
            while(rs.next())
            {    
-               out.print("<form action='ticketeditServlet' method='POST'");
+               out.print("<center><form action='ticketeditServlet' method='POST'");
                out.print("<table>");
                
                out.print("<tr> <td>Ticket ID</td>    <td> <input type='text' name ='TicID' id='TicID' value= '" + rs.getString("TicID") + "'/> <br><br>");
@@ -66,7 +66,7 @@ public class ticketeditReturn extends HttpServlet {
                out.print("<tr> <td>Ticket Quantty</td>    <td> <input type='text' name ='TicQ' id='TicQ' value= '" + rs.getString("TicQ") + "'/> </td> </tr> <br><br>");
                out.print("<tr>  <td colspan ='2'> <input type='submit'  value= 'Update'/> </td> </tr>");
                out.print("</table>");
-               out.print("</form>");
+               out.print("</form><center>");
                
                
            }

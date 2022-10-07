@@ -1,4 +1,4 @@
-package updateDelete;
+package addFlightstaff2;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -27,6 +27,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+
 @WebServlet("/flightUI")
 public class flightUI extends HttpServlet {
     
@@ -49,7 +51,9 @@ public class flightUI extends HttpServlet {
         rsp.setContentType("text/html");
         PrintWriter out = rsp.getWriter();
         
-        
+        out.println("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">");
+        out.println("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">");
+//      out.println("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.21.1/themes/bulma/bootstrap-table-bulma.min.css\">");
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/dea","root","");
@@ -60,16 +64,17 @@ public class flightUI extends HttpServlet {
             Statement stmt = con.createStatement();
             rs = stmt.executeQuery(sql);
             
-            out.println("<table cellspacing='0' width='350px' border='1'>");
+            
+            out.println("<br><br><br><br><center><table align-text='center' cellspacing='200px' width='1000px' hight='150px' border='1'>");
             out.println("<tr>");
-            out.println("<td> flightID </td>");
-            out.println("<td> name </td>");
-            out.println("<td> Ffrom </td>");
-            out.println("<td> Fto </td>");
-            out.println("<td> Atime </td>");
-            out.println("<td> Dtime </td>");
-            out.println("<td> Update </td>");
-            out.println("<td> Delete </td>");
+            out.println("<td> <b>Flight ID </td>");
+            out.println("<td> <b>Name </td>");
+            out.println("<td><b> Flight From </td>");
+            out.println("<td> <b>Flight To </td>");
+            out.println("<td> <b>Arrival Time </td>");
+            out.println("<td> <b>Departure Time </td>");
+            out.println("<td> <b>Update </td>");
+            out.println("<td> <b>Delete </td>");
             
             out.println("</tr>");
             
@@ -89,7 +94,7 @@ public class flightUI extends HttpServlet {
 
             }
             
-            out.println("</table>");
+            out.println("</table></center>");
  
             
         } catch (ClassNotFoundException ex) {
