@@ -12,31 +12,64 @@ and open the template in the editor.
         <link rel="stylesheet" href="index/index.css">
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <link href="index/index.css" rel="stylesheet" type="text/css"/>
-       
+        <link href="index/index.css" rel="stylesheet" type="text/css"/>
+    
+        <script>
+            $(document).ready(function(){
+    $(window).scroll(function(){
+        if(this.scrollY > 20){
+            $('.navbar').addClass("sticky");
+        }else{
+            $('.navbar').removeClass("sticky");
+        }
+    });
+
+    // toggle menu/navbar script
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+});
+
+        </script>
     </head>
     <body>
 
 
     <!--start nav bar  -->
     <nav class="navbar">
-        <ul class="links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="userLogin.jsp">User</a></li>
-            <li><a href="StaffLogin.jsp">Staff</a></li>
-            <li><a href="adminLogin.jsp">Admin</a></li>
-            <li><a href="index.html">News</a></li>
-        </ul>
-        <label id="icon" class="menu1">
-            <i class="fa fa-bars"></i>
-        </label>
-
-    </nav>
-    <!--end of the nav bar-->
-    <div class="about-section">
-        <br><br><br><h1>Phinix Air Lines</h1>
+        <div class="max-width">
+            <div class="logo"><a href="#"><img src="images/logo5.png"></a></div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">User</a></li>
+                <li><a href="#">Staff</a></li>
+                <li><a href="#">Admin</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
+    </nav>
+    
+    
+    
+    
+   
       
+    <!-- home section -->
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Towards a sky</div>
+                <div class="text-2">With Us....</div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
     
 
 
@@ -45,7 +78,6 @@ and open the template in the editor.
 
       <div class = "content">
           <h2>Who We Are</h2>
-          <span><!-- line here --></span>
 
           <p>We started extending help to needy children and youth who were
             eager to study and work for a better life. This moment intensified when 
@@ -163,19 +195,20 @@ and open the template in the editor.
                 <a href="#">Sign Up</a>
             </p><br>
     
-            <p class="name">© 2022 donate Pvt. Ltd.</p>
+            <p class="name">© 2022 phoneixAirlines Pvt. Ltd.</p>
         </div>
     
         <div class="center">
             <div>
                 <h3>Contact Us</h3><br>
                 <p>Email:</p><br>
-                <p><span><a href="mailto:donate@gmail.com">donate@gmail.com</a></span></p>
+                <p><span><a href="phoneixairlines@gmail.com">donate@gmail.com</a></span></p>
             </div>
             <br><br>
             <div>
                 <p>Phone</p><br>
-                <p>0775643128</p>
+                <p>0110001110</p><br>
+                <p>0110001111</p>
             </div>
             
         </div>
@@ -186,16 +219,16 @@ and open the template in the editor.
                 Our mission is to provide all the facilities for poor, orphaned children in order to develop their social, physical,emotional and intellectual abilities.We promote a safe environment that creates an opportuniy for all children to develop their skills and abilities in order to make their future success. </p></div>
             <div class="icons">
                 <a href="http://www.facebook.com" target="_blank">
-    <img src="image/facebook.jpg" alt="Facebook" width="20" height="20"/>
+    <img src="images/facebook.png" alt="Facebook" width="40" height="40"/>
     </a>
     <a href="www.twitter.com" target="_blank">
-    <img src="image/twit.jpg" alt="Twitter" width="20" height="20"/>
+    <img src="images/twitter.png" alt="Twitter" width="40" height="40"/>
     </a>
         <a href="www.instagram.com" target="_blank">
-    <img src="image/insta.jpg" alt="instagram" width="20" height="20"/>
+    <img src="images/instagram.png" alt="instagram" width="40" height="40"/>
     </a>
         <a href="www.youtube.com" target="_blank">
-    <img src="image/youtube.jpg" alt="youtube" width="20" height="20"/>
+    <img src="images/youtube.png" alt="youtube" width="40" height="40"/>
     </a>
             </div>
         </div>
