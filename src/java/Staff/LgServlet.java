@@ -77,7 +77,7 @@ public class LgServlet extends HttpServlet {
        HttpSession session=request.getSession();
        RequestDispatcher dispatcher=null;
        
-        try {
+       try {
             
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false","root","");
@@ -94,7 +94,7 @@ public class LgServlet extends HttpServlet {
              
              session.setAttribute("email",rs.getString("email"));
                  session.setAttribute("password",rs.getString("password"));
-                 dispatcher = request.getRequestDispatcher("StaffDash.jsp");
+                 dispatcher = request.getRequestDispatcher("index.html");
              
              
          }else{
