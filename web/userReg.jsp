@@ -13,14 +13,14 @@
         <title>user Registration</title>
     </head>
     <body>
-         <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
+        <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
         
          
           <div class="container">
             <div class="regbox box">
                 <img class="avatar" src="StaffImg/RegLogo.png">
          
-              <form action="userReg" method="post">
+     <form action="userReg" method="post">
          
   
        <h1>User Registration</h1>
