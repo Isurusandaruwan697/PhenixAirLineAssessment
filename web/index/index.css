@@ -442,13 +442,14 @@ footer{
 .footer .icons{
 	margin-top: 25px;
 }
-
+.footer .icons a{
+        text-decoration: none;
+}
 .footer .icons a img{
 	display: inline-block;
-	width: 35px;
-	height: 35px;
-	margin-right: 3px;
-	margin-bottom: 5px;
+	width: 40px;
+	height: 40px;
+	
 }
 
 /*  code for Responsive Footer */
