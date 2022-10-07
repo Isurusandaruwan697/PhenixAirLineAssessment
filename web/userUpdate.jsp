@@ -33,6 +33,13 @@ function myFunction() {
            
               <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
                <form action="Updateuser" method="post">
+                   
+                     <%
+        if(session.getAttribute("uname")==null){
+            response.sendRedirect("userLogin.jsp");
+        }
+        
+        %>
   
       <center>
          

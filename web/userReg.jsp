@@ -9,39 +9,40 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+         <link href="StaffCss/style.css" rel="stylesheet" type="text/css"/>
+        <title>user Registration</title>
     </head>
     <body>
          <input type="hidden" id="status" value="<%=request.getAttribute("status") %>">
         
-              <form action="userReg" method="post">
-  
-      <center>
          
-  <div class="container">
+          <div class="container">
+            <div class="regbox box">
+                <img class="avatar" src="StaffImg/RegLogo.png">
+         
+              <form action="userReg" method="post">
+         
+  
        <h1>User Registration</h1>
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+    <input type="text" placeholder="" name="uname" required>
 
     <label for="email"><b>Email&ensp;&ensp;&ensp;</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required><br><br>
+    <input type="text" placeholder="" name="email" required>
     
     <label for="Contact"><b>Mobile&ensp;&ensp;</b></label>
-    <input type="text" placeholder="Enter Mobile" name="mobile" required><br><br>
+    <input type="text" placeholder="" name="mobile" required>
     
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+    <input type="password" placeholder="" name="psw" required>
         
-    <button type="submit">Register</button>&ensp;&ensp;<button  type="reset" class="cancelbtn">Cancel</button><br><br>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me&ensp;&ensp;
-      <a href="userLogin.jsp">Sign-In</a>
-    </label>
-        
-  </div>
-
-      </center>
+     <input type="submit" value="Register">
+                   
+                 <a href="userLogin.jsp">Already have Account?</a>
+       
 </form>
+            </div>
+          </div>
         
         <link rel=" stylesheet" href="alret/dist/sweetalert.css">
         <script>
