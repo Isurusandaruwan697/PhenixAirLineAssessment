@@ -10,36 +10,61 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>user Dashbord</title>
+        <link href="StaffCss/hover.css" rel="stylesheet" type="text/css"/>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
     </head>
     <body>
-        <h1>User Dashbord</h1>
-       
+    <center>
         
-        
-         <%
-        if(session.getAttribute("uname")==null){
-            response.sendRedirect("userLogin.jsp");
-        }
-        
-        %>
-       
-        
-          <div class="container-fluid">
-  <div class="row content">
-    <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
-      <br>
       
-       <h2>Hello <%=session.getAttribute("uname") %>
+        <h1>Hello <%=session.getAttribute("uname") %></h1></center>
+      
+         <div class="container">
+       <div class="box">
+       <div class="icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+       <div class="content"><h3><a href="userProfile.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">User</a></h3>
+       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file. </p>
+       </div>
+       </div>
+        
+        
+            <div class="box">
+            <div class="icon">
+                <i class="fa fa-user-plus" aria-hidden="true"></i></div>
+                <div class="content"><h3><a href=" userUpdate.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">User Profile Update</a></h3>
+       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       </div>
+            </div>
            
-          
-           </h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="userProfile.jsp">User</a></li>
-        <li><a href="userUpdate.jsp">Update Profile</a></li>
-        <li><a href="viewFlight.jsp">View Flights</a></li>
-        <li><a href="SerchFlight.jsp">search Flight</a></li>
-        <li><a href="Logout">Log-Out</a></li>
-      </ul><br>
+            <div class="box">
+            <div class="icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+            <div class="content"><h3><a href="SerchFlight.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">Serch Flights</a></h3>
+       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       </div>
+            </div>
+            <br><br>
+            
+        <div class="box">
+        <div class="icon"><i class="fa fa-ticket" aria-hidden="true"></i></div>
+        <div class="content"><h3><a href="viewFlight.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">View All Flights</a></h3>
+       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.</p>
+       </div>
+        </div>
+        <div class="box">
+        <div class="icon"><i class="fa fa-lock" aria-hidden="true"></i></div>
+        <div class="content"><h3><a href="seats.jsp"style="text-decoration: none; color: #ffffff; font-weight: bold">Reserve Seats</a> </h3>
+       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+            <div class="content"><h3><a href="Logout"style="text-decoration: none; color: #ffffff; font-weight: bold">Log Out</a> </h3>
+       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       </div>
+        </div>
+        </div>
+       
+        
     </body>
 </html>
