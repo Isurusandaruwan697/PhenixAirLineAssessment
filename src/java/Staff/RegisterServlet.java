@@ -75,6 +75,7 @@ public class RegisterServlet extends HttpServlet {
             String name = request.getParameter("name");
             String email = request.getParameter("email");
             String password = request.getParameter("password");
+            String sc = request.getParameter("usertype");
             RequestDispatcher dispatcher=null;
             
 try {
@@ -84,10 +85,11 @@ try {
 
             Class.forName("com.mysql.jdbc.Driver");
             Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/dea?useSSL=false","root","");
-            PreparedStatement pst=con.prepareStatement("insert into staffreg(name,email,password) values (?,?,?)");
-            pst.setString(1, name);
+            PreparedStatement pst=con.prepareStatement("insert into staffreg(name,email,usertype,password) values (?,?,?,?)");
+                        pst.setString(1, name);
                         pst.setString(2, email);
-                         pst.setString(3, password);
+                        pst.setString(3, sc);
+                        pst.setString(4, password);
                                                 
                                                 int rowCount = pst.executeUpdate();
                                                 dispatcher=request.getRequestDispatcher("index.html");
@@ -102,6 +104,7 @@ try {
             dispatcher.forward(request, response);
             
         } catch (Exception e) {
+            e.printStackTrace();
         }
 
     }
