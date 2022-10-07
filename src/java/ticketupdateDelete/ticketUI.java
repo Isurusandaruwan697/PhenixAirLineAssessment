@@ -50,6 +50,9 @@ public class ticketUI extends HttpServlet {
         PrintWriter out = rsp.getWriter();
         
         
+        out.println("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">");
+        out.println("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">");
+        
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/dea","root","");
@@ -60,16 +63,16 @@ public class ticketUI extends HttpServlet {
             Statement stmt = con.createStatement();
             rs = stmt.executeQuery(sql);
             
-            out.println("<table cellspacing='0' width='350px' border='1'>");
+            out.println("<br><br><br><br><center><table align-text='center' cellspacing='200px' width='1000px' hight='150px' border='1'>");
             out.println("<tr>");
-            out.println("<td> TicID </td>");
-            out.println("<td> TicClass </td>");
-            out.println("<td> TicFrom </td>");
-            out.println("<td> TicTo </td>");
-            out.println("<td> TicDT </td>");
-            out.println("<td> TicQ </td>");
-            out.println("<td> Update </td>");
-            out.println("<td> Delete </td>");
+            out.println("<td> <b>Ticket ID</b> </td>");
+            out.println("<td> <b>Ticket Class </td>");
+            out.println("<td> <b>Ticket From </td>");
+            out.println("<td> <b>Ticket To </td>");
+            out.println("<td> <b>Ticket Date & Time </td>");
+            out.println("<td> <b>Ticket Quentity </td>");
+            out.println("<td> <b>Update </td>");
+            out.println("<td> <b>Delete </td>");
             
             out.println("</tr>");
             
@@ -95,7 +98,7 @@ public class ticketUI extends HttpServlet {
 
             }
             
-            out.println("</table>");
+            out.println("</table></center>");
  
             
         } catch (ClassNotFoundException ex) {

@@ -10,6 +10,7 @@ package updateDelete;
  *
  * @author Pathum Krishantha
  */
+import addFlightstaff2.flightView;
 import java.io.IOException;
 import java.io.PrintWriter;
 import static java.lang.Integer.parseInt;

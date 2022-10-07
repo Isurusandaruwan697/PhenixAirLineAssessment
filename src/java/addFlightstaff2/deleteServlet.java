@@ -11,6 +11,7 @@ package updateDelete;
  * @author Pathum Krishantha
  */
 
+import addFlightstaff2.flightView;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;

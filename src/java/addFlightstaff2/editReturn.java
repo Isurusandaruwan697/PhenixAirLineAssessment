@@ -55,7 +55,7 @@ public class editReturn extends HttpServlet {
            
            while(rs.next())
            {    
-               out.print("<form action='editServlet' method='POST'");
+               out.print("<center><form action='editServlet' method='POST'");
                out.print("<table>");
                
                out.print("<tr> <td>flightID</td>    <td> <input type='text' name ='flightID' id='flightID' value= '" + rs.getString("flightID") + "'/> <br><br>");
@@ -66,7 +66,7 @@ public class editReturn extends HttpServlet {
                out.print("<tr> <td>Departure time</td>    <td> <input type='text' name ='Dtime' id='Dtime' value= '" + rs.getString("Dtime") + "'/> </td> </tr> <br><br>");
                out.print("<tr>  <td colspan ='2'> <input type='submit'  value= 'Update'/> </td> </tr>");
                out.print("</table>");
-               out.print("</form>");
+               out.print("</form><center>");
                
                
            }
