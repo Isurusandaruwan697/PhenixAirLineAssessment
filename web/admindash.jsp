@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>user Dashbord</title>
+        <title>Admin Dashbord</title>
         <link href="StaffCss/hover.css" rel="stylesheet" type="text/css"/>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
           <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css" integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9" crossorigin="anonymous">
@@ -18,13 +18,13 @@
     <center>
         
       
-        <h1>Hello <%=session.getAttribute("uname") %></h1></center>
+        <h1>Admin Dashboard</h1>
       
          <div class="container">
        <div class="box">
        <div class="icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-       <div class="content"><h3><a href="userProfile.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">User</a></h3>
-       <p>The user can acess the user dashboard through the user profile </p>
+       <div class="content"><h3><a href="userDashboard.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">User</a></h3>
+       <p>The Admin can acess the user dashboard through the user profile </p>
        </div>
        </div>
         

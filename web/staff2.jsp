@@ -33,14 +33,14 @@
             <div class="icon">
                 <i class="fa fa-plus-square" aria-hidden="true"></i></i></div>
                 <div class="content"><h3><a href=" AddFlight.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">Add Flight Details</a></h3>
-       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       <p>Staff 2 members only can veiw the flight details</p>
        </div>
             </div>
                <div class="box">
             <div class="icon">
                <i class="fa fa-sign-out" aria-hidden="true"></i></i></div>
                 <div class="content"><h3><a href=" Logout" style="text-decoration: none; color: #ffffff; font-weight: bold">Logout</a></h3>
-       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       <p>Staff can logout the system by using this</p>
        </div>
             </div>
            

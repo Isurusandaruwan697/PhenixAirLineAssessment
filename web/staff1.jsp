@@ -25,7 +25,7 @@
        <div class="box">
        <div class="icon"><i class="fa fa-eye" aria-hidden="true"></i></div>
        <div class="content"><h3><a href="viewFlight.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">View Flight</a></h3>
-       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file. </p>
+       <p>Staff 1 members can veiw all the flight details using this </p>
        </div>
        </div>
         
@@ -34,14 +34,14 @@
             <div class="icon">
                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i></i></div>
                 <div class="content"><h3><a href=" FlightUpdatedelete.jsp" style="text-decoration: none; color: #ffffff; font-weight: bold">Flight Update/Delete</a></h3>
-       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       <p>Staff 1 members can update,delete all the flight details </p>
        </div>
             </div>
                <div class="box">
             <div class="icon">
                <i class="fa fa-sign-out" aria-hidden="true"></i></i></div>
                 <div class="content"><h3><a href=" Logout" style="text-decoration: none; color: #ffffff; font-weight: bold">Logout</a></h3>
-       <p>This documentation describes customizing WordPress by adding PHP code to your theme's functions.php file.</p>
+       <p>Staff can logout by using this option.</p>
        </div>
             </div>
            
