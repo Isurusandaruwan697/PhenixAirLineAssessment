@@ -18,16 +18,10 @@
             <div class="regbox box">
                 <img class="avatar" src="StaffImg/RegLogo.png">
                 <h1>Register Account</h1>
+                
                 <form action="RegisterServlet" method="post">
                   
-                    <P>Staff Category</p>
-                    <select name="Staff Category">
-                        <option value=""> --Select--</option>
-                        <option value="Grade One Staff">Grade One Staff</option>
-                        <option value="Grade Two Staff">Grade Two Staff</option>
-                    </select>
-                    
-                              
+                  
                    <p>Username</p>
                    <input type="text" placeholder="Your Username" name="name" required>
                     
@@ -46,11 +40,11 @@
                    
                 <input type="submit" value="Register">
                    
-                 <a href="StaffLogin.jsp">Already have Account?</a>
-                </form>
+    </form>
 </div>
 </div>
 
        
     </body>
 </html>
+
