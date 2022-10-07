@@ -76,7 +76,8 @@ public class RegisterServlet extends HttpServlet {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
             RequestDispatcher dispatcher=null;
-             try {
+            
+try {
              Statement st ;
 
                    
@@ -106,6 +107,7 @@ public class RegisterServlet extends HttpServlet {
     }
 
             
+ 
  
 
     /**
