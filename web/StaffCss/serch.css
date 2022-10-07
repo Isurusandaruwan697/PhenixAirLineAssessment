@@ -1,0 +1,75 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 7, 2022, 1:29:41 AM
+    Author     : User
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  height: 100vh;
+display: flexbox;
+justify-content: center;
+align-items: center;
+background-image: url(../StaffImg/early-morning-flights.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    padding: 5%;
+    background-image: url(../StaffImg/early-morning-flights.jpg);
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.serch_bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+}
+
+.serch_bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: #coc7ff;
+    
+}
+
+::placeholder{
+    color: #cac7ff;
+}
+
+.serch_bar button img{
+    width: 25px;
+}
+
+.serch_bar button{
+    
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: #58629b;
+    cursor: pointer;
+}

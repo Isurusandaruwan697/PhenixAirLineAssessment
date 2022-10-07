@@ -6,118 +6,210 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>PhinexAirLines</title>
+        <title>PhoneixAirLines</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                  <style>
-                      
-/*Footer css*/
-                      
-
-                      
-                      
-/*navigation css  */
-                      
-* {
-  box-sizing: border-box;
-}
-
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
-
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-</style>
+        <link rel="stylesheet" href="index/index.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+          <link href="index/index.css" rel="stylesheet" type="text/css"/>
+       
     </head>
     <body>
-        <div class="header">     
-  <h1>Phenix AirLines</h1>
-  <p>Let's Flight Beyond The World.</p>
-</div>
 
-<div class="navbar">
-  <a href="#">Home</a>
-  <a href="Login.jsp">User</a>
-  <a href="#">Staff</a>
-  <a href="#" class="right">Admin</a>
-</div>
-        
-        
-        
-         <footer>
-              <div class="article">
-                <div class="left box">
-                  <div class="upper">
-                    <div class="topic">About us</div>
-                    <p>Launched in 2022, peonix airline is an award winning airline with a solid reputation for service, comfort, safety, reliability, and punctuality.</p>
-                  </div>
 
-                   <!--contact us division-->
-                  <div class="lower">
-                    <div class="topic">Contact us</div>
-                    <div class="phone">
-                      <a href="#"><i class="fas fa-phone-volume"></i>+94110012345</a>
-                    </div>
-                    <div class="email">
-                      <a href="#"><i class="fas fa-envelope"></i>peonixairline@gmail.com</a>
-                    </div>
-                  </div>
-                </div>
+    <!--start nav bar  -->
+    <nav class="navbar">
+        <ul class="links">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="userLogin.jsp">User</a></li>
+            <li><a href="StaffLogin.jsp">Staff</a></li>
+            <li><a href="adminLogin.jsp">Admin</a></li>
+            <li><a href="index.html">News</a></li>
+        </ul>
+        <label id="icon" class="menu1">
+            <i class="fa fa-bars"></i>
+        </label>
 
-               <!--our service division-->
-                <div class="middle box">
-                  <div class="topic">Our Services</div>
-                  <div><a href="#">Cargo</a></div>
-                  <div><a href="#">Training</a></div>
-                  <div><a href="#">Ground Handling</a></div>
-                  <div><a href="#">Air Taxi</a></div>
-                  <div><a href="#">Global citizenship</a></div>
-                  <div><a href="#">business credit cards</a></div>
-               <!-- subscribe us and social media division-->
-                
+    </nav>
+    <!--end of the nav bar-->
+    <div class="about-section">
+        <br><br><br><h1>Phinix Air Lines</h1>
+        </div>
+      
+    
+
+
+    <!--start who we are-->
+    <section>
+
+      <div class = "content">
+          <h2>Who We Are</h2>
+          <span><!-- line here --></span>
+
+          <p>We started extending help to needy children and youth who were
+            eager to study and work for a better life. This moment intensified when 
+            we found that there were many such underprivileged children who needed help 
+            with food, shelter and education. Our team expanded and we spread out
+            in different regions to make sure we cover all possible areas and help
+            as many children as possible.
+            We now run shelter homes, schools and a reasonable mess that helps such needy young
+            people. We also have our helpline offices spread throughout the country so one can 
+            approach us anytime they need help.</p>
+      </div>
+  </section>
+<!--end of the who we are-->
+ <!--start of the counter-->
+  
+    <center>
+         <h1 style="color:green"> Our numbers that speak </h1>
+         <section class="Image">
+          
+          
+         <div class="row">   
+        <div class="column">   
+            <div class="block">  
+                  
+            <p><i class="fa fa-user"></i></p>   
+            <h3> 950,000+ </h3>   
+            <p> Children Helped </p>   
+        </div>   
+            </div>  
               
-              </div>
-            </footer>
+        <div class="column">   
+            <div class="block">  
+                    
+            <p><i class="fa fa-book"></i></p>   
+            <h3> 50,000T </h3>   
+            <p> Food Provided </p>   
+            </div>  
+        </div>   
+              
+        <div class="column">   
+            <div class="block">  
+               
+            <p><i class="fa fa-smile-o"></i></p>   
+            <h3> $300,000+ </h3>   
+            <p> Funds Raised</p>   
+            </div>  
+        </div>      
+    </center>  
+    <!--end of the counter-->
+
+    <!-- start of ther gallery -->
+    <div class="header">
+        <h1>Top Destinations</h1>
+    </div>
+
+    
+    <div class="row">
+
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="images/photo17.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/photo13.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/photo18.jpg" style="width:100%" alt="">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="images/photo15.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/photo20.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/photo21.jpg" style="width:100%" alt="">
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="img-hover-zoom">
+                <img src="images/photo22.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/photo23.jpg" style="width:100%" alt="">
+            </div>
+            <div class="img-hover-zoom">
+                <img src="images/photo26.jpg" style="width:100%" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- end of the gallery-->
+
+    <br>
+    <br>
+
+      <!--footer start-->
+    <footer class="footer">
+
+        <div class="left">
+      
+            <h3>Important links</h3>
+    
+            <p class="links">
+                <a href="#">Home</a><br>
+                
+                <a href="#">About</a><br>
+                
+                <a href="#">Contact Us</a><br>
+                
+                <a href="#">Donate</a><br>
+                <a href="#">Sign Up</a>
+            </p><br>
+    
+            <p class="name">© 2022 donate Pvt. Ltd.</p>
+        </div>
+    
+        <div class="center">
+            <div>
+                <h3>Contact Us</h3><br>
+                <p>Email:</p><br>
+                <p><span><a href="mailto:donate@gmail.com">donate@gmail.com</a></span></p>
+            </div>
+            <br><br>
+            <div>
+                <p>Phone</p><br>
+                <p>0775643128</p>
+            </div>
+            
+        </div>
+        <div class="right">
+            <h3>Mission</h3><br>
+            <div>
+            <p class="mission">
+                Our mission is to provide all the facilities for poor, orphaned children in order to develop their social, physical,emotional and intellectual abilities.We promote a safe environment that creates an opportuniy for all children to develop their skills and abilities in order to make their future success. </p></div>
+            <div class="icons">
+                <a href="http://www.facebook.com" target="_blank">
+    <img src="image/facebook.jpg" alt="Facebook" width="20" height="20"/>
+    </a>
+    <a href="www.twitter.com" target="_blank">
+    <img src="image/twit.jpg" alt="Twitter" width="20" height="20"/>
+    </a>
+        <a href="www.instagram.com" target="_blank">
+    <img src="image/insta.jpg" alt="instagram" width="20" height="20"/>
+    </a>
+        <a href="www.youtube.com" target="_blank">
+    <img src="image/youtube.jpg" alt="youtube" width="20" height="20"/>
+    </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!--footer end-->
+    
+
+
+
+
+
+
+
+
     </body>
 </html>

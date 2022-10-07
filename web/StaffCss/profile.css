@@ -1,0 +1,32 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 6, 2022, 10:18:16 PM
+    Author     : User
+*/
+
+body {
+    background-image: url(../StaffImg/early-morning-flights.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: montserrat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.singn-up a{
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 45px;
+   
+}
+
+.singn-up a:hover{
+    text-decoration: underline;
+
+}
